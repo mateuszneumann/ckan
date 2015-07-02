@@ -2773,7 +2773,7 @@ msgstr "Zapisz"
 #: ckan/templates/group/member_new.html:78
 #: ckan/templates/organization/member_new.html:79
 msgid "What are roles?"
-msgstr "Czym są role?"
+msgstr "Co to są role?"
 
 #: ckan/templates/group/member_new.html:81
 msgid ""
@@ -2803,7 +2803,7 @@ msgstr "Utwórz grupę"
 #: ckan/templates/snippets/sort_by.html:14
 #: ckanext/example_idatasetform/templates/package/search.html:12
 msgid "Relevance"
-msgstr "Relewancja"
+msgstr "Trafność"
 
 #: ckan/templates/group/read.html:18
 #: ckan/templates/organization/bulk_process.html:99
@@ -2901,7 +2901,7 @@ msgstr "Usuń"
 
 #: ckan/templates/group/snippets/helper.html:4
 msgid "What are Groups?"
-msgstr "Czym są grupy?"
+msgstr "Co to są grupy?"
 
 #: ckan/templates/group/snippets/helper.html:8
 msgid ""
@@ -2912,8 +2912,8 @@ msgid ""
 msgstr ""
 "Z pomocą grup RepOD można tworzyć kolekcje zbiorów danych i zarządzać nimi. W ten"
 " sposób można przypisywać zbiory danych do konkretnej instytucji, projektu lub "
-"zespołu, albo na konkretny temat. Jeżeli chciał(a)byś utworzyć nową grupę, skontaktuj"
-"się z nami: repod@pon.edu.pl."
+"zespołu, albo tworzyć kolekcje tematyczne. Jeżeli chciał(a)byś utworzyć nową grupę, skontaktuj"
+" się z nami: repod@pon.edu.pl."
 
 #: ckan/templates/group/snippets/history_revisions.html:10
 #: ckan/templates/package/snippets/history_revisions.html:10
@@ -3232,7 +3232,7 @@ msgstr "Zbiory danych w folderze: {group}"
 #: ckan/templates/organization/snippets/help.html:4
 #: ckan/templates/organization/snippets/helper.html:4
 msgid "What are Organizations?"
-msgstr "Czym są foldery użytkowników?"
+msgstr "Co to są foldery użytkowników?"
 
 #: ckan/templates/organization/snippets/help.html:7
 msgid ""
@@ -3293,7 +3293,7 @@ msgstr "Utwórz zbiór danych"
 
 #: ckan/templates/package/base_form_page.html:22
 msgid "What are datasets?"
-msgstr "Czym są zbiory danych?"
+msgstr "Co to są zbiory danych?"
 
 #: ckan/templates/package/base_form_page.html:25
 msgid ""
@@ -3946,7 +3946,7 @@ msgstr "Powiązany formularz"
 
 #: ckan/templates/related/base_form_page.html:20
 msgid "What are related items?"
-msgstr "Czym są powiązane obiekty?"
+msgstr "Co to są powiązane obiekty?"
 
 #: ckan/templates/related/base_form_page.html:22
 msgid ""
@@ -3990,7 +3990,7 @@ msgstr "Nie nadesłano jeszcze żadnych aplikacji."
 
 #: ckan/templates/related/dashboard.html:48
 msgid "What are applications?"
-msgstr "Czym są aplikacje?"
+msgstr "Co to są aplikacje?"
 
 #: ckan/templates/related/dashboard.html:50
 msgid ""

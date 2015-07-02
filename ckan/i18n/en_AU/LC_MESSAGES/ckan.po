@@ -12,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2015-01-26 11:55+0000\n"
 "PO-Revision-Date: 2015-01-26 12:20+0000\n"
-"Last-Translator: Adri?  Mercader <adria.mercader@okfn.org>\n"
+"Last-Translator: Adrià Mercader <adria.mercader@okfn.org>\n"
 "Language-Team: English (Australia) (http://www.transifex.com/projects/p/ckan/language/en_AU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2238,7 +2238,7 @@ msgstr "Search Datasets"
 #: ckan/templates/user/snippets/user_search.html:6
 #: ckan/templates/user/snippets/user_search.html:7
 msgid "Search"
-msgstr "Search in repository"
+msgstr "Search the repository"
 
 #: ckan/templates/page.html:6
 msgid "Skip to content"
@@ -3584,7 +3584,7 @@ msgstr "Title"
 
 #: ckan/templates/package/snippets/package_basic_fields.html:4
 msgid "eg. A descriptive title"
-msgstr "eg. A descriptive title"
+msgstr "A descriptive title for this dataset"
 
 #: ckan/templates/package/snippets/package_basic_fields.html:13
 msgid "eg. my-dataset"
@@ -3592,7 +3592,7 @@ msgstr "eg. my-dataset"
 
 #: ckan/templates/package/snippets/package_basic_fields.html:19
 msgid "eg. Some useful notes about the data"
-msgstr "eg. Some useful notes about the dataset"
+msgstr "A short description of this dataset and how it was created"
 
 #: ckan/templates/package/snippets/package_basic_fields.html:24
 msgid "eg. economy, mental health, government"
@@ -3686,11 +3686,11 @@ msgstr ""
 
 #: ckan/templates/package/snippets/resource_form.html:28
 msgid "eg. January 2011 Gold Prices"
-msgstr "eg. Measurements with the method..."
+msgstr ""
 
 #: ckan/templates/package/snippets/resource_form.html:32
 msgid "Some useful notes about the data"
-msgstr "Some useful notes about this file"
+msgstr ""
 
 #: ckan/templates/package/snippets/resource_form.html:37
 msgid "eg. CSV, XML or JSON"
@@ -4848,7 +4848,7 @@ msgstr "Dataset Leaderboard"
 msgid ""
 "Choose a dataset attribute and find out which categories in that area have "
 "the most datasets. E.g. tags, groups, license, res_format, country."
-msgstr "Choose a dataset attribute and find out which categories in that area have the most datasets. E.g. keywords, groups, license, res_format, country."
+msgstr "Choose a dataset attribute and find out which categories in that area have the most datasets. E.g. keywords, groups, license."
 
 #: ckanext/stats/templates_legacy/ckanext/stats/leaderboard.html:20
 msgid "Choose area"
