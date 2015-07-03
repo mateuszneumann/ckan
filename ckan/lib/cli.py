@@ -1805,7 +1805,11 @@ class TranslationsCommand(CkanCommand):
         from pylons import config
         self.ckan_path = os.path.join(os.path.dirname(__file__), '..')
         i18n_path = os.path.join(self.ckan_path, 'i18n')
-        self.i18n_path = config.get('ckan.i18n_directory', i18n_path)
+        config_i18n_path = config.get('ckan.i18n_directory')
+        if config_i18n_path:
+            self.i18n_path = os.path.join(config_i18n_path, 'i18n')
+        else:
+            self.i18n_path = i18n_path
         command = self.args[0]
         if command == 'mangle':
             self.mangle_po()
@@ -1879,6 +1883,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         import simplejson as json
 
         def create_js(source, lang):
+            print source
             print 'Generating', lang
             po = polib.pofile(source)
             data = self.po2dict(po, lang)
