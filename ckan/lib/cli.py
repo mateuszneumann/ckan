@@ -1891,7 +1891,9 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
                               ensure_ascii=False, indent=2 * ' ')
             out_dir = os.path.abspath(os.path.join(self.ckan_path, 'public',
                                                    'base', 'i18n'))
+            print out_dir
             out_file = open(os.path.join(out_dir, '%s.js' % lang), 'w')
+            print out_file
             out_file.write(data.encode('utf-8'))
             out_file.close()
 
