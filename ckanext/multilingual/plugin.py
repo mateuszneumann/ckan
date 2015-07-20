@@ -4,8 +4,8 @@ from ckan.plugins import IGroupController, IOrganizationController, ITagControll
 import pylons
 from ckan.logic import get_action
 from pylons import config
+from ckan.lib.i18n import get_locales_from_config
 
-LANGS = ['en', 'fr', 'de', 'es', 'it', 'nl', 'ro', 'pt', 'pl']
 
 def translate_data_dict(data_dict):
     '''Return the given dict (e.g. a dataset dict) with as many of its fields
@@ -196,6 +196,8 @@ class MultilingualDataset(SingletonPlugin):
 
     def before_index(self, search_data):
 
+        langs = get_locales_from_config()
+        
         default_lang = search_data.get(
             'lang_code', 
              pylons.config.get('ckan.locale_default', 'en')
@@ -207,7 +209,7 @@ class MultilingualDataset(SingletonPlugin):
         title_translations = get_action('term_translation_show')(
                           {'model': ckan.model},
                           {'terms': [title],
-                              'lang_codes': LANGS})
+                              'lang_codes': langs})
 
         for translation in title_translations:
             title_field = 'title_' + translation['lang_code']
@@ -227,9 +229,9 @@ class MultilingualDataset(SingletonPlugin):
         field_translations = get_action('term_translation_show')(
                           {'model': ckan.model},
                           {'terms': all_terms,
-                              'lang_codes': LANGS})
+                              'lang_codes': langs})
 
-        text_field_items = dict(('text_' + lang, []) for lang in LANGS)
+        text_field_items = dict(('text_' + lang, []) for lang in langs)
         
         text_field_items['text_' + default_lang].extend(all_terms)
 
@@ -243,7 +245,7 @@ class MultilingualDataset(SingletonPlugin):
         return search_data
 
     def before_search(self, search_params):
-        lang_set = set(LANGS)
+        lang_set = set(get_locales_from_config())
 
         try:
             current_lang = pylons.request.environ['CKAN_LANG']
