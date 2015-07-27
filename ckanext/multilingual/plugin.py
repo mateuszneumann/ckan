@@ -4,8 +4,8 @@ from ckan.plugins import IGroupController, IOrganizationController, ITagControll
 import pylons
 from ckan.logic import get_action
 from pylons import config
+from ckan.lib.i18n import get_locales_from_config
 
-LANGS = ['en', 'fr', 'de', 'es', 'it', 'nl', 'ro', 'pt', 'pl']
 
 def translate_data_dict(data_dict):
     '''Return the given dict (e.g. a dataset dict) with as many of its fields
@@ -193,87 +193,6 @@ KEYS_TO_IGNORE = ['state', 'revision_id', 'id', #title done seperately
 
 class MultilingualDataset(SingletonPlugin):
     implements(IPackageController, inherit=True)
-
-    def before_index(self, search_data):
-
-        default_lang = search_data.get(
-            'lang_code', 
-             pylons.config.get('ckan.locale_default', 'en')
-        )
-
-        ## translate title
-        title = search_data.get('title')
-        search_data['title_' + default_lang] = title 
-        title_translations = get_action('term_translation_show')(
-                          {'model': ckan.model},
-                          {'terms': [title],
-                              'lang_codes': LANGS})
-
-        for translation in title_translations:
-            title_field = 'title_' + translation['lang_code']
-            search_data[title_field] = translation['term_translation']
-
-        ## translate rest
-        all_terms = []
-        for key, value in search_data.iteritems():
-            if key in KEYS_TO_IGNORE or key.startswith('title'):
-                continue
-            if not isinstance(value, list):
-                value = [value]
-            for item in value:
-                if isinstance(item, basestring):
-                    all_terms.append(item)
-
-        field_translations = get_action('term_translation_show')(
-                          {'model': ckan.model},
-                          {'terms': all_terms,
-                              'lang_codes': LANGS})
-
-        text_field_items = dict(('text_' + lang, []) for lang in LANGS)
-        
-        text_field_items['text_' + default_lang].extend(all_terms)
-
-        for translation in sorted(field_translations):
-            lang_field = 'text_' + translation['lang_code']
-            text_field_items[lang_field].append(translation['term_translation'])
-
-        for key, value in text_field_items.iteritems():
-            search_data[key] = ' '.join(value)
-        
-        return search_data
-
-    def before_search(self, search_params):
-        lang_set = set(LANGS)
-
-        try:
-            current_lang = pylons.request.environ['CKAN_LANG']
-        except TypeError as err:
-            if err.message == ('No object (name: request) has been registered '
-                               'for this thread'):
-                # This happens when this code gets called as part of a paster
-                # command rather then as part of an HTTP request.
-                current_lang = config.get('ckan.locale_default')
-            else:
-                raise
-
-        # fallback to default locale if locale not in suported langs
-        if not current_lang in lang_set:
-            current_lang = config.get('ckan.locale_default')
-        # fallback to english if default locale is not supported
-        if not current_lang in lang_set:
-            current_lang = 'en'
-        # treat current lang differenly so remove from set
-        lang_set.remove(current_lang)
-
-        # weight current lang more highly
-        query_fields = 'title_%s^8 text_%s^4' % (current_lang, current_lang)
-
-        for lang in lang_set:
-            query_fields += ' title_%s^2 text_%s' % (lang, lang)
-
-        search_params['qf'] = query_fields
-
-        return search_params
 
     def after_search(self, search_results, search_params):
 
