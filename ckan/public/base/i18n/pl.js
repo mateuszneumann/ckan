@@ -20,10 +20,6 @@
     null,
     "Potwierdź"
   ],
-  "Edit": [
-    null,
-    "Edycja"
-  ],
   "Failed to load data API information": [
     null,
     "Nie można załadować informacji z Data API"
