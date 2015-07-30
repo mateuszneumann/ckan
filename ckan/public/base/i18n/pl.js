@@ -20,6 +20,10 @@
     null,
     "Potwierdź"
   ],
+  "Edit": [
+    null,
+    "Edycja"
+  ],
   "Failed to load data API information": [
     null,
     "Nie można załadować informacji z Data API"
@@ -130,7 +134,7 @@
   ],
   "You are uploading a file. Are you sure you want to navigate away and stop this upload?": [
     null,
-    "Ładujesz właśnie plik. Czy chcesz przejść dalej i zatrzymaćten proces?"
+    "Ładujesz właśnie plik. Czy chcesz przejść dalej i zatrzymać\"\n\"ten proces?"
   ],
   "show less": [
     null,

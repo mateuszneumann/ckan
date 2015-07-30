@@ -68,10 +68,6 @@
     null,
     "Show more"
   ],
-  "Start typingâ?¦": [
-    null,
-    "Start typingâ?¦"
-  ],
   "There are unsaved modifications to this form": [
     null,
     "There are unsaved modifications to this form"
