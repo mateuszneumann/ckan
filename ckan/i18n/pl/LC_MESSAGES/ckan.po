@@ -12,8 +12,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2015-01-26 11:55+0000\n"
 "PO-Revision-Date: 2015-01-26 12:23+0000\n"
-"Last-Translator: Adrià Mercader <adria.mercader@okfn.org>\n"
-"Language-Team: Polish (http://www.transifex.com/projects/p/ckan/language/pl/)\n"
+"Last-Translator: Marta Hoffman-Sommer <m.hoffman-sommer@icm.edu.pl>\n"
+"Language-Team: Polish RepOD Team (http://repod.pon.edu.pl//)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -861,7 +861,7 @@ msgstr "{actor} zaktualizował/a zbiór danych {dataset}"
 
 #: ckan/lib/activity_streams.py:76
 msgid "{{actor} changed the extra {extra} of the dataset {dataset}"
-msgstr "{actor} zmienił/a dodatek {extra} w zbiorze danych {dataset}"
+msgstr "{{actor} zmienił/a dodatek {extra} w zbiorze danych {dataset}"
 
 #: ckan/lib/activity_streams.py:79
 msgid "{actor} updated the resource {resource} in the dataset {dataset}"
@@ -2370,7 +2370,7 @@ msgid ""
 msgstr ""
 " <p>Jako administrator masz pełną kontrolę nad tą instancją CKAN. "
 "Zachowaj ostrożność!</p> <p>Wskazówki na temat funkcji administracyjnych można znaleźć w "
-"CKAN <a href=\"%(docs_url)s\" target=\"_blank\">przewodniku administratora</a></p> "
+"<a href=\"%(docs_url)s\" target=\"_blank\">przewodniku administratora</a> CKAN</p> "
 
 #: ckan/templates/admin/trash.html:20
 msgid "Purge"
@@ -2879,9 +2879,9 @@ msgstr "Zapisz grupę"
 #: ckanext/example_theme/v11_HTML_and_CSS/templates/snippets/example_theme_most_popular_groups.html:22
 msgid "{num} Dataset"
 msgid_plural "{num} Datasets"
-msgstr[0] "{num} Zbiór danych"
-msgstr[1] "{num} Zbiory danych"
-msgstr[2] "{num} Zbiorów danych"
+msgstr[0] "{num} zbiór danych"
+msgstr[1] "{num} zbiory danych"
+msgstr[2] "{num} zbiorów danych"
 
 #: ckan/templates/group/snippets/group_item.html:34
 #: ckan/templates/organization/snippets/organization_item.html:33
@@ -3681,7 +3681,7 @@ msgstr "Tytuł"
 
 #: ckan/templates/package/snippets/package_basic_fields.html:4
 msgid "eg. A descriptive title"
-msgstr "np. Opisowy tytuł"
+msgstr "Opisowy tytuł zbioru danych"
 
 #: ckan/templates/package/snippets/package_basic_fields.html:13
 msgid "eg. my-dataset"
@@ -3689,7 +3689,7 @@ msgstr "np. mój-zbiór-danych"
 
 #: ckan/templates/package/snippets/package_basic_fields.html:19
 msgid "eg. Some useful notes about the data"
-msgstr "np. Opis zbioru danych"
+msgstr "Krótki opis zbioru danych i sposobu, w jaki powstał."
 
 #: ckan/templates/package/snippets/package_basic_fields.html:24
 msgid "eg. economy, mental health, government"
@@ -3733,8 +3733,8 @@ msgid ""
 "Database License</a>."
 msgstr ""
 "Wybierana powyżej <i>Licencja dla plików</i> będzie dotyczyć jedynie zawartości plików,"
-" które dodasz do tego zbioru danych. Wysyłając ten formularz, zgadzasz się - w granicach"
-" dopuszczonych prawem - zrzec się wszelkich praw autorskich i pokrewnych zapewniających "
+" które dodasz do tego zbioru danych. Wysyłając ten formularz, zrzekasz się - w granicach"
+" dopuszczonych prawem - wszelkich praw autorskich i pokrewnych zapewniających "
 "ochronę prawną <i>zbioru danych jako zestawienia</i>, jak również wprowadzonych do formularza"
 " wartości <i>metadanych</i>, na mocy licencji <a href=\"http://creativecommons.org/about/cc0\">CC0 1.0</a>."
 
@@ -4165,7 +4165,7 @@ msgstr "Pokaż tylko najpopularniejsze {facet_type} "
 
 #: ckan/templates/snippets/facet_list.html:87
 msgid "There are no {facet_type} that match this search"
-msgstr "Nie ma żadnych {facet_type}"
+msgstr "Brak wyników"
 
 #: ckan/templates/snippets/home_breadcrumb_item.html:2
 #: ckanext/stats/templates_legacy/ckanext/stats/index.html:51
@@ -4537,7 +4537,7 @@ msgstr "Dlaczego warto się rejestrować?"
 
 #: ckan/templates/user/new.html:28
 msgid "Create datasets, groups and other exciting things"
-msgstr "Rejestracja jest wymagan, aby tworzyć własne zbiory danych"
+msgstr "Rejestracja jest wymagana, aby tworzyć własne zbiory danych"
 
 #: ckan/templates/user/new_user_form.html:5
 msgid "username"
@@ -4595,7 +4595,7 @@ msgstr "Oznacza to, że te informacje są widoczne tylko dla Ciebie."
 
 #: ckan/templates/user/read_base.html:87
 msgid "Member Since"
-msgstr "Członkostwo od"
+msgstr "Data rejestracji"
 
 #: ckan/templates/user/read_base.html:96
 msgid "API Key"
